@@ -1,0 +1,39 @@
+openapi: 3.0.0
+info:
+  title: Patient
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths: {}
+components:
+  schemas:
+    patient:
+      title: patient
+      type: object
+      properties:
+        identifier:
+          type: object
+          properties:
+            use:
+              type: string
+            system:
+              type: string
+            value:
+              type: string
+            assigner:
+              type: string
+            type:
+              type: string
+        id:
+          type: string
+        '':
+          type: string
+  securitySchemes:
+    API Key - 1:
+      type: oauth2
+      flows:
+        clientCredentials:
+          tokenUrl: ''
+          refreshUrl: ''
+          scopes: {}
+      description: ''
