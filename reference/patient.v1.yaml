@@ -13,6 +13,7 @@ paths:
         name: patientId
         in: path
         required: true
+        description: 'the patient id  '
     get:
       summary: Your GET endpoint
       tags: []
@@ -26,7 +27,8 @@ paths:
       operationId: get-patient-patientId
       security:
         - API Key - 1: []
-      description: ''
+      description: 'This is the patient endpoint  '
+      parameters: []
 components:
   schemas:
     patient:
