@@ -2,9 +2,31 @@ openapi: 3.0.0
 info:
   title: Patient
   version: '1.0'
+  description: 'Patients! '
 servers:
   - url: 'http://localhost:3000'
-paths: {}
+paths:
+  '/patient/{patientId}':
+    parameters:
+      - schema:
+          type: string
+        name: patientId
+        in: path
+        required: true
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/patient'
+      operationId: get-patient-patientId
+      security:
+        - API Key - 1: []
+      description: ''
 components:
   schemas:
     patient:
